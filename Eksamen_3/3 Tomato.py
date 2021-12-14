@@ -3,7 +3,7 @@ class Tomato:
     # Стадии созревания помидора
     states = {0: 'посадили', 1: 'цветок', 2: 'зеленый ', 3: 'красный, созрел'}
 
-    def __init__(self, index, _state):
+    def __init__(self, index):
         self._index = index
         self._state = 0
 
@@ -34,7 +34,7 @@ class TomatoBush:
     # Создаем список из объектов класса Tomato
     def __init__(self, num):
        # super(). __init__()
-        self.tomatoes = [Tomato(index) for index in range(0, num)]
+        self.tomatoes = [Tomato(index) for index in range(0, num -1)]
 
     # Переводим все томаты из списка на следующий этап созревания
     def grow_all(self):
